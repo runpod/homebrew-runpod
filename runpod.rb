@@ -5,11 +5,11 @@
 class Runpod < Formula
   desc ""
   homepage "https://github.com/runpod/runpodctl"
-  version "1.14.3"
+  version "1.14.4"
 
   on_macos do
-    url "https://github.com/runpod/runpodctl/releases/download/v1.14.3/runpodctl_1.14.3_darwin_all.tar.gz"
-    sha256 "6fec45133e66baa7e48f8f15875c5a08c39b500444acda8e24be49e708467af3"
+    url "https://github.com/runpod/runpodctl/releases/download/v1.14.4/runpodctl_1.14.4_darwin_all.tar.gz"
+    sha256 "4c7764109c74bc7ea424d61551d8707874a7ed34c5905f94d55aa9d60ae2b55d"
 
     def install
       bin.install "runpodctl"
@@ -18,19 +18,19 @@ class Runpod < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/runpod/runpodctl/releases/download/v1.14.3/runpodctl_1.14.3_linux_arm64.tar.gz"
-      sha256 "2643efc293a00f8cc460240da441ceaab76b5c720735259a3599caa6b215b121"
+      url "https://github.com/runpod/runpodctl/releases/download/v1.14.4/runpodctl_1.14.4_linux_arm64.tar.gz"
+      sha256 "93370176e1f3989019c39ed02b44cc8d269ef77a540851477ffd63e2e7d6e5fc"
 
       def install
-        bin.install "runpod"
+        bin.install "runpodctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/runpod/runpodctl/releases/download/v1.14.3/runpodctl_1.14.3_linux_amd64.tar.gz"
-      sha256 "9b3f8ab13e0cd464e4506c1a0ee458acd1c97a2ca747bf7a3d3fd6b0a9829cb5"
+      url "https://github.com/runpod/runpodctl/releases/download/v1.14.4/runpodctl_1.14.4_linux_amd64.tar.gz"
+      sha256 "fa83600a483c5d7704ee4248a51cc0975bfd94774c3047e18f21f4b56a366d67"
 
       def install
-        bin.install "runpod"
+        bin.install "runpodctl"
       end
     end
   end
